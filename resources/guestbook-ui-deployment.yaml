@@ -13,10 +13,10 @@ spec:
       labels:
         app: guestbook-ui
         eti: vfffffkfkfkkfkfkfkfgkddddddd
-        
+
     spec:
       containers:
-      - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
-        name: guestbook-ui-test
-        ports:
-        - containerPort: 80
+        - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+          name: guestbook-ui-test
+          ports:
+            - containerPort: 80
