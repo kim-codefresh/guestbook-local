@@ -12,7 +12,7 @@ spec:
     metadata:
       labels:
         app: guestbook-ui
-        eti: vffffgffvdsssakejd
+        eti: vffffgffvdsssakejdrf
     spec:
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
