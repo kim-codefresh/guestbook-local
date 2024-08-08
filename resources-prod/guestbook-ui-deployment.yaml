@@ -23,7 +23,3 @@ spec:
               #   httpGet:
               #     path: /nonExist # test degraded
               #     port: 80
-          readinessProbe:
-            httpGet:
-              path: /nonExist
-              port: 80
