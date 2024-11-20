@@ -4,7 +4,7 @@ metadata:
   name: guestbook-ui
 spec:
   replicas: 2
-  revisionHistoryLimit: 3
+  # revisionHistoryLimit: 3
   selector:
     matchLabels:
       app: guestbook-ui
@@ -14,9 +14,6 @@ spec:
         app: guestbook-ui
         eti: vfffxcsdddfvsdfdfgijjwerwekmklmjioidfgdfg
     spec:
-      poddeployment:
-    # replica count for trigger environment (ITU)
-        replicaCount: 2
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
         name: guestbook-ui-test
