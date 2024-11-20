@@ -14,6 +14,9 @@ spec:
         app: guestbook-ui
         eti: vfffxcsdddfvsdfdfgijjwerwekmklmjioidfgdfg
     spec:
+      poddeployment:
+    # replica count for trigger environment (ITU)
+        replicaCount: 2
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
         name: guestbook-ui-test
