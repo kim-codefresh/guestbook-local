@@ -18,7 +18,7 @@ spec:
         - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
           name: guestbook-ui-test
           ports:
-          - containerPort: 80
+            - containerPort: 80
         # readinessProbe:
         #   httpGet:
         #     path: /nonExist # test degraded
