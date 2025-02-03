@@ -4,7 +4,7 @@ metadata:
   name: guestbook-ui
 spec:
   replicas: 2
-  revisionHistoryLimit: 3
+  # revisionHistoryLimit: 3
   selector:
     matchLabels:
       app: guestbook-ui
@@ -15,11 +15,7 @@ spec:
         eti: vffffgffvdsssad
     spec:
       containers:
-        - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
-          name: guestbook-ui-test
-          ports:
-            - containerPort: 80
-          # readinessProbe:
-          #   httpGet:
-          #     path: /nonExist # test degraded
-          #     port: 80
+      - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+        name: guestbook-ui-test
+        ports:
+        - containerPort: 80
