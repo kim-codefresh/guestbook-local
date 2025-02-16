@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: scme-test-app-dep
-  namespace: dev
+  namespace: dev-2
   labels:
     app: scme-test-app
 spec:
