@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scme-test-app-dep
+  namespace: staging-app-2
+  labels:
+    app: scme-test-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: scme-test-app
+  template:
+    metadata:
+      labels:
+        app: scme-test-app
+    spec:
+      containers:
+        - name: scme-test-app
+          image: scottyjoe9/scme-test-app:0.0.8
+          ports:
+            - containerPort: 80
