@@ -1,22 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: scme-test-app-dep
-  namespace: staging-app-2
-  labels:
-    app: scme-test-app
+  name: guestbook-ui
 spec:
-  replicas: 1
+  replicas: 2
+  # revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: scme-test-app
+      app: guestbook-ui
   template:
     metadata:
       labels:
-        app: scme-test-app
+        app: guestbook-ui
+        eti: vff
     spec:
       containers:
-        - name: scme-test-app
-          image: scottyjoe9/scme-test-app:0.0.8
-          ports:
-            - containerPort: 80
+      - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+        name: guestbook-ui-test
+        ports:
+        - containerPort: 80
