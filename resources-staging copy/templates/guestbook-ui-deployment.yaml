@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: guestbook-ui-2
+spec:
+  replicas: 2
+  # revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: guestbook-ui-2
+  template:
+    metadata:
+      labels:
+        app: guestbook-ui-2
+        eti: vfffxcsdddfvsdfdfgijjwerwekmklmjioidfgdfg
+    spec:
+      containers:
+        - image: idanarbel/rollouts-demo:green
+          name: guestbook-ui-test-2
+          ports:
+            - containerPort: 80
+        # readinessProbe:
+        #   httpGet:
+        #     path: /nonExist # test degraded
+        #     port: 80
+
+
+
+
+
