@@ -15,7 +15,7 @@ spec:
         eti: vfffxcsdddfvsdfdfgijjwerwekmklmjioidfgdfqg
     spec:
       containers:
-        - image: idanarbel/rollouts-demo:purple
+        - image: idanarbel/rollouts-demo:blue
           name: guestbook-ui-test
           ports:
             - containerPort: 80
